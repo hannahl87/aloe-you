@@ -1,9 +1,5 @@
-import React from 'react';
-import ShopCard from '../shop-card/shop-card.component';
+import Directory from '../directory/directory.component';
 import './hero.component.css';
-import monstera from '../../assets/images/monstera.webp';
-import pothos from '../../assets/images/scindapusus.webp';
-import rubber from '../../assets/images/rubber-plant.webp';
 
 const Hero = () => (
   <div className='hero-container mx-8 md:col-span-3 md:mr-14'>
@@ -18,11 +14,7 @@ const Hero = () => (
         straight to your door!
       </h3>
     </div>
-    <div className='cards mt-6 flex flex-wrap items-center md:grid md:grid-cols-3 md:gap-5'>
-      <ShopCard type={'Easy Care'} img={rubber} />
-      <ShopCard type={'Pet Friendly'} img={monstera} />
-      <ShopCard type={'Low Light'} img={pothos} />
-    </div>
+    <Directory />
   </div>
 );
 
