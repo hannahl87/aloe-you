@@ -23,6 +23,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F0EFF4;
 
   --font-primary: 'Oxygen';
   --font-secondary: 'Quicksand';

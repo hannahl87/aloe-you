@@ -1,0 +1,12 @@
+.company-name {
+    font: var(--font-secondary)
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.logo-container h2 {
+    font-size: larger;
+}

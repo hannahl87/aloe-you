@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import HomePage from './homepage.component';
+import Nav from './components/Nav/nav.component';
+import Highlight from './components/highlight/highlight.component';
 
 function App() {
   return (
     <div>
-      <HomePage />
+      <Nav />
+      <Highlight />
     </div>
   );
 }

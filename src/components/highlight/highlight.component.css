@@ -1,0 +1,7 @@
+.window {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: #FABB51;
+    height: 280px;
+    width: 200px;
+}
