@@ -1,6 +1,9 @@
 import React from 'react';
 import ShopCard from '../shop-card/shop-card.component';
 import './hero.component.css';
+import monstera from '../../assets/images/monstera.webp';
+import pothos from '../../assets/images/scindapusus.webp';
+import rubber from '../../assets/images/rubber-plant.webp';
 
 const Hero = () => (
   <div className='hero flex flex-col ml-8'>
@@ -16,9 +19,9 @@ const Hero = () => (
       </h3>
     </div>
     <div className='cards flex space-x-3'>
-      <ShopCard />
-      <ShopCard />
-      <ShopCard />
+      <ShopCard type={'Easy Care'} img={rubber} />
+      <ShopCard type={'Pet Friendly'} img={monstera} />
+      <ShopCard type={'Low Light'} img={pothos} />
     </div>
   </div>
 );
