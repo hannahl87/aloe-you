@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/aloe-you/static/css/main.97078c63.css",
-    "main.js": "/aloe-you/static/js/main.52fdcaa5.js",
+    "main.css": "/aloe-you/static/css/main.50eb6026.css",
+    "main.js": "/aloe-you/static/js/main.68bb2afd.js",
     "static/js/377.30e59533.chunk.js": "/aloe-you/static/js/377.30e59533.chunk.js",
     "static/media/Quicksand-Regular.ttf": "/aloe-you/static/media/Quicksand-Regular.109d09e5f7c827d891ab.ttf",
     "static/media/sans.webp": "/aloe-you/static/media/sans.9174e005a48085a1cb61.webp",
     "service-worker.js": "/aloe-you/service-worker.js",
     "static/media/Oxygen-Regular.ttf": "/aloe-you/static/media/Oxygen-Regular.9d375dd5d21ee7c8c01d.ttf",
     "static/media/monstera.webp": "/aloe-you/static/media/monstera.c45992c58e04e214c2db.webp",
+    "static/media/rubber-plant.webp": "/aloe-you/static/media/rubber-plant.9a4127cc320ae700f046.webp",
     "static/media/logo.webp": "/aloe-you/static/media/logo.33021f352bdf9951c92c.webp",
+    "static/media/scindapusus.webp": "/aloe-you/static/media/scindapusus.424ad1c82fd342b8a975.webp",
     "index.html": "/aloe-you/index.html",
-    "main.97078c63.css.map": "/aloe-you/static/css/main.97078c63.css.map",
-    "main.52fdcaa5.js.map": "/aloe-you/static/js/main.52fdcaa5.js.map",
+    "main.50eb6026.css.map": "/aloe-you/static/css/main.50eb6026.css.map",
+    "main.68bb2afd.js.map": "/aloe-you/static/js/main.68bb2afd.js.map",
     "377.30e59533.chunk.js.map": "/aloe-you/static/js/377.30e59533.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.97078c63.css",
-    "static/js/main.52fdcaa5.js"
+    "static/css/main.50eb6026.css",
+    "static/js/main.68bb2afd.js"
   ]
 }
