@@ -1,5 +1,6 @@
-.company-name {
-    font: var(--font-secondary)
+.nav {
+    font-family: 'Quicksand',
+    sans-serif;
 }
 
 .logo {

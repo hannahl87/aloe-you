@@ -1,7 +1,31 @@
+.highlight-container {
+    color: var(--fontColor)
+}
+
 .window {
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     background-color: #FABB51;
     height: 280px;
-    width: 200px;
+}
+
+.window, .highlight-title {
+    width: 230px;
+}
+
+.highlight-img {
+    height: 240px;
+    width: auto;
+}
+
+.highlight-title h2 {
+    font-family: 'Quicksand',
+    sans-serif;
+    font-size: larger;
+}
+
+.highlight-title span {
+    font-family: 'Oxygen',
+    sans-serif;
+    font-size: small;
 }
