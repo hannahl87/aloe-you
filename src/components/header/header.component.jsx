@@ -1,21 +1,21 @@
 import React from 'react';
 import logo from '../../assets/images/logo.webp';
-import './nav.component.css';
+import './header.component.css';
 
-const Nav = () => (
-  <nav className='nav flex my-4 mx-6 justify-between'>
+const Header = () => (
+  <header className='nav flex my-4 mx-6 justify-between'>
     <div className='logo-container flex'>
       <img src={logo} alt='Logo of a green monstera leaf' className='logo' />
       <h2 className='company-name flex items-end ml-2'>Aloe You</h2>
     </div>
-    <div className='nav-links flex items-end'>
+    <nav className='nav-links flex items-end'>
       <ul className='flex space-x-11'>
         <li className='hover:text-teal-300'>Shop</li>
         <li className='hover:text-teal-300'>About</li>
         <li className='hover:text-teal-300'>Care</li>
         <li className='hover:text-teal-300'>Contact</li>
       </ul>
-    </div>
+    </nav>
     <div className='utils flex'>
       <div className='bag flex items-end hover:scale-125'>
         <svg
@@ -32,7 +32,7 @@ const Nav = () => (
         <p>Login</p>
       </div>
     </div>
-  </nav>
+  </header>
 );
 
-export default Nav;
+export default Header;

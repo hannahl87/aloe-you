@@ -6,7 +6,7 @@ const ShopCard = ({ type, img }) => (
     <div className='top-card rounded-t-xl'>
       <img src={img} alt='plant' className='plant-img rounded-t-xl' />
     </div>
-    <div className='shop-cta text-center bg-teal-300 rounded-b-xl py-1 w-full'>
+    <div className='shop-cta text-center bg-teal-300 rounded-b-xl py-1'>
       <p className='shop-title text-white'>{type}</p>
       <span className='cta'>Shop Now</span>
     </div>

@@ -4,12 +4,12 @@ import sans from '../../assets/images/sans.webp';
 import CtaButton from '../cta-button.component.css/cta-button.component';
 
 const Highlight = () => (
-  <div className='highlight-container mr-4'>
-    <div className='window flex justify-center items-center mx-6 mt-6'>
+  <div className='highlight-container ml-14 col-span-2 px-6'>
+    <div className='window flex justify-center items-center py-8'>
       <img
         src={sans}
         alt='Picture of a snake plant'
-        className='highlight-img items-center'
+        className='highlight-img items-center h-60'
       />
     </div>
     <div className='highlight-title mx-6'>
