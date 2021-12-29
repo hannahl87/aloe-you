@@ -1,5 +1,6 @@
-import Directory from '../directory/directory.component';
+import React from 'react';
 import './hero.component.css';
+import Directory from '../directory/directory.component';
 
 const Hero = () => (
   <div className='hero-container mx-8 md:col-span-3 md:mr-14'>

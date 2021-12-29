@@ -32,13 +32,10 @@ class Directory extends React.Component {
 
   render() {
     return (
-      <div className='cards mt-6 flex flex-wrap items-center md:grid md:grid-cols-3 md:gap-5'>
+      <div className='cards mt-6 flex flex-col items-center md:grid md:grid-cols-3 md:gap-5'>
         {this.state.categories.map(({ id, title, img }) => (
           <ShopCard key={id} type={title} img={img} />
         ))}
-        {/* <ShopCard type={'Easy Care'} img={rubber} />
-            <ShopCard type={'Pet Friendly'} img={monstera} />
-            <ShopCard type={'Low Light'} img={pothos} /> */}
       </div>
     );
   }
