@@ -8,7 +8,7 @@ const Header = () => (
       <img src={logo} alt='Logo of a green monstera leaf' className='logo' />
       <h2 className='company-name flex items-end ml-2'>Aloe You</h2>
     </div>
-    <nav className='nav-links flex items-end'>
+    <nav className='nav-links items-end hidden md:flex'>
       <ul className='flex space-x-11'>
         <li className='hover:text-teal-300'>Shop</li>
         <li className='hover:text-teal-300'>About</li>
