@@ -12,7 +12,7 @@ function App() {
       <div className='h-screen'>
         <Header />
         <Routes>
-          <Route path='/aloe-you/' element={<Homepage />} />
+          <Route path='/aloe-you' element={<Homepage />} />
           <Route path='/aloe-you/shop' element={<ShopPage />} />
         </Routes>
       </div>
