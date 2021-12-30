@@ -1,5 +1,5 @@
 import React from 'react';
-import './shop-card.component.css';
+import './shop-card.styles.css';
 
 const ShopCard = ({ type, img }) => (
   <div className='shop-card flex flex-col mb-4 cursor-pointer hover:scale-105 md:col-span-1'>
