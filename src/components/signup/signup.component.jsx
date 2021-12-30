@@ -1,15 +1,17 @@
 import React from 'react';
 import FormButton from '../form-button/form-button.component';
 import FormInput from '../form-input/form-input.component';
-import './login.styles.css';
+import './signup.styles.css';
 
-class Login extends React.Component {
+class SignUp extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       email: '',
       password: '',
+      name: '',
+      mobile: '',
     };
   }
 
@@ -18,6 +20,8 @@ class Login extends React.Component {
     this.setState({
       email: '',
       password: '',
+      name: '',
+      mobile: '',
     });
   };
 
@@ -28,15 +32,24 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className='login'>
+      <div className='signup'>
         <div className='title flex flex-col my-4'>
-          <h3 className='text-l font-bold'>Login</h3>
-          <p>Welcome back, you've been missed!</p>
+          <h3 className='text-l font-bold'>Sign Up</h3>
+          <p>Enter your details below to sign up</p>
         </div>
 
         <form className='login-form flex flex-col' onSubmit={this.handleSubmit}>
-          <label htmlFor='email'>Email</label>
           <FormInput
+            label='Name'
+            name='name'
+            type='text'
+            value={this.state.name}
+            placeholder='Enter name'
+            handleChange={this.handleChange}
+            required
+          />
+          <FormInput
+            label='Email'
             name='email'
             type='email'
             value={this.state.email}
@@ -44,8 +57,17 @@ class Login extends React.Component {
             handleChange={this.handleChange}
             required
           />
-          <label htmlFor='password'>Password</label>
           <FormInput
+            label='Mobile'
+            name='mobile'
+            type='text'
+            value={this.state.mobile}
+            placeholder='Enter mobile'
+            handleChange={this.handleChange}
+            required
+          />
+          <FormInput
+            label='Password'
             name='password'
             type='password'
             value={this.state.password}
@@ -54,11 +76,11 @@ class Login extends React.Component {
             required
           />
 
-          <FormButton value='Login' />
+          <FormButton value='Sign Up' />
         </form>
       </div>
     );
   }
 }
 
-export default Login;
+export default SignUp;
