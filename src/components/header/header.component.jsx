@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.webp';
 import './header.component.css';
 
@@ -10,10 +11,18 @@ const Header = () => (
     </div>
     <nav className='nav-links items-end hidden md:flex'>
       <ul className='flex space-x-11'>
-        <li className='hover:text-teal-300'>Shop</li>
-        <li className='hover:text-teal-300'>About</li>
-        <li className='hover:text-teal-300'>Care</li>
-        <li className='hover:text-teal-300'>Contact</li>
+        <Link to='/aloe-you/shop' className='hover:text-teal-400'>
+          Shop
+        </Link>
+        <Link to='/aloe-you/shop' className='hover:text-teal-400'>
+          About
+        </Link>
+        <Link to='/aloe-you/shop' className='hover:text-teal-400'>
+          Care
+        </Link>
+        <Link to='/aloe-you/shop' className='hover:text-teal-400'>
+          Contact
+        </Link>
       </ul>
     </nav>
     <div className='utils flex'>
