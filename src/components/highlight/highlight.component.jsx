@@ -8,7 +8,7 @@ const Highlight = () => (
     <div className='window flex justify-center items-center py-8'>
       <img
         src={sans}
-        alt='Picture of a snake plant'
+        alt='snake plant'
         className='highlight-img items-center h-60'
       />
     </div>
