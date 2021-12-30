@@ -32,7 +32,7 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <div className='signup'>
+      <div className='signup my-8 md:my-0'>
         <div className='title flex flex-col my-4'>
           <h3 className='text-l font-bold'>Sign Up</h3>
           <p>Enter your details below to sign up</p>
