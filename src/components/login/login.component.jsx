@@ -53,8 +53,7 @@ class Login extends React.Component {
             handleChange={this.handleChange}
             required
           />
-
-          <FormButton value='Login' />
+          <FormButton>Login</FormButton>
         </form>
       </div>
     );

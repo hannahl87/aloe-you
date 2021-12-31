@@ -76,7 +76,7 @@ class SignUp extends React.Component {
             required
           />
 
-          <FormButton value='Sign Up' />
+          <FormButton>Sign Up</FormButton>
         </form>
       </div>
     );
