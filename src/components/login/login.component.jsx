@@ -35,7 +35,6 @@ class Login extends React.Component {
         </div>
 
         <form className='login-form flex flex-col' onSubmit={this.handleSubmit}>
-          <label htmlFor='email'>Email</label>
           <FormInput
             name='email'
             type='email'
@@ -44,7 +43,6 @@ class Login extends React.Component {
             handleChange={this.handleChange}
             required
           />
-          <label htmlFor='password'>Password</label>
           <FormInput
             name='password'
             type='password'

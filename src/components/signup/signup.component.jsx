@@ -40,7 +40,6 @@ class SignUp extends React.Component {
 
         <form className='login-form flex flex-col' onSubmit={this.handleSubmit}>
           <FormInput
-            label='Name'
             name='name'
             type='text'
             value={this.state.name}
@@ -49,7 +48,6 @@ class SignUp extends React.Component {
             required
           />
           <FormInput
-            label='Email'
             name='email'
             type='email'
             value={this.state.email}
@@ -58,7 +56,6 @@ class SignUp extends React.Component {
             required
           />
           <FormInput
-            label='Mobile'
             name='mobile'
             type='text'
             value={this.state.mobile}
@@ -67,7 +64,6 @@ class SignUp extends React.Component {
             required
           />
           <FormInput
-            label='Password'
             name='password'
             type='password'
             value={this.state.password}
