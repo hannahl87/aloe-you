@@ -1,4 +1,5 @@
 import React from 'react';
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 import FormButton from '../form-button/form-button.component';
 import FormInput from '../form-input/form-input.component';
 import './signup.styles.css';
@@ -10,19 +11,36 @@ class SignUp extends React.Component {
     this.state = {
       email: '',
       password: '',
-      name: '',
-      mobile: '',
+      confirmPassword: '',
+      displayName: '',
     };
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    this.setState({
-      email: '',
-      password: '',
-      name: '',
-      mobile: '',
-    });
+    const { email, password, confirmPassword } = this.state;
+
+    if (password !== confirmPassword) {
+      console.log('passwords dont match');
+      return;
+    }
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      await createUserProfileDocument(user, {});
+
+      this.setState({
+        email: '',
+        password: '',
+        confirmPassword: '',
+        displayName: '',
+      });
+    } catch (err) {
+      console.log('signin err', err);
+    }
   };
 
   handleChange = (event) => {
@@ -31,6 +49,7 @@ class SignUp extends React.Component {
   };
 
   render() {
+    const { displayName, email, password, confirmPassword } = this.state;
     return (
       <div className='signup my-8 md:my-0'>
         <div className='title flex flex-col my-4'>
@@ -40,9 +59,9 @@ class SignUp extends React.Component {
 
         <form className='login-form flex flex-col' onSubmit={this.handleSubmit}>
           <FormInput
-            name='name'
+            name='displayName'
             type='text'
-            value={this.state.name}
+            value={displayName}
             placeholder='Enter name'
             handleChange={this.handleChange}
             required
@@ -50,24 +69,24 @@ class SignUp extends React.Component {
           <FormInput
             name='email'
             type='email'
-            value={this.state.email}
+            value={email}
             placeholder='Enter email'
-            handleChange={this.handleChange}
-            required
-          />
-          <FormInput
-            name='mobile'
-            type='text'
-            value={this.state.mobile}
-            placeholder='Enter mobile'
             handleChange={this.handleChange}
             required
           />
           <FormInput
             name='password'
             type='password'
-            value={this.state.password}
+            value={password}
             placeholder='Enter password'
+            handleChange={this.handleChange}
+            required
+          />
+          <FormInput
+            name='confirmPassword'
+            type='password'
+            value={confirmPassword}
+            placeholder='Re-enter password'
             handleChange={this.handleChange}
             required
           />
