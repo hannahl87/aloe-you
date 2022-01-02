@@ -4,7 +4,7 @@ import sans from '../../assets/images/sans.webp';
 import CtaButton from '../cta-button.component.css/cta-button.component';
 
 const Highlight = () => (
-  <div className='highlight-container ml-14 col-span-2 px-8 mr-6 flex-1'>
+  <div className='highlight-container ml-14 hidden md:inline md:col-span-2 mr-6 flex-1'>
     <div className='window flex justify-center items-center py-8'>
       <img
         src={sans}
