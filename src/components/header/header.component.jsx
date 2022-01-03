@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.webp';
 import './header.styles.css';
 
+import { connect } from 'react-redux';
+
 import { auth } from '../../firebase/firebase.utils';
 
 const Header = ({ currentUser }) => (
@@ -56,4 +58,8 @@ const Header = ({ currentUser }) => (
   </header>
 );
 
-export default Header;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Header);
