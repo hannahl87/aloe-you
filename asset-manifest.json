@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aloe-you/static/css/main.5f341d00.css",
-    "main.js": "/aloe-you/static/js/main.9a2331b1.js",
+    "main.css": "/aloe-you/static/css/main.486a8320.css",
+    "main.js": "/aloe-you/static/js/main.00d96e33.js",
     "static/js/377.30e59533.chunk.js": "/aloe-you/static/js/377.30e59533.chunk.js",
     "static/media/Quicksand-Regular.ttf": "/aloe-you/static/media/Quicksand-Regular.109d09e5f7c827d891ab.ttf",
     "static/media/sans.webp": "/aloe-you/static/media/sans.9174e005a48085a1cb61.webp",
@@ -12,12 +12,12 @@
     "static/media/logo.webp": "/aloe-you/static/media/logo.33021f352bdf9951c92c.webp",
     "static/media/scindapusus.webp": "/aloe-you/static/media/scindapusus.424ad1c82fd342b8a975.webp",
     "index.html": "/aloe-you/index.html",
-    "main.5f341d00.css.map": "/aloe-you/static/css/main.5f341d00.css.map",
-    "main.9a2331b1.js.map": "/aloe-you/static/js/main.9a2331b1.js.map",
+    "main.486a8320.css.map": "/aloe-you/static/css/main.486a8320.css.map",
+    "main.00d96e33.js.map": "/aloe-you/static/js/main.00d96e33.js.map",
     "377.30e59533.chunk.js.map": "/aloe-you/static/js/377.30e59533.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f341d00.css",
-    "static/js/main.9a2331b1.js"
+    "static/css/main.486a8320.css",
+    "static/js/main.00d96e33.js"
   ]
 }
