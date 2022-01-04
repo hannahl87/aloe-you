@@ -1,0 +1,18 @@
+.App {
+  --bg-main-color: #F0EFF4;
+  --card-color: #F7F7F7;
+  --main-yellow: #FABB51;
+  --button-green: #7CD1B8;
+  --secondary-green: #25B4A7;
+}
+
+
+@media screen and (max-width: 767px) {
+  .highlight-container {
+    order: 2;
+  }
+
+  .hero-container {
+    order: 1;
+  }
+}

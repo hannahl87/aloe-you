@@ -1,0 +1,14 @@
+.top-card {
+    background-color: #F7F7F7;
+    height: 200px;
+}
+
+.shop-cta {
+    background-color: #7CD1B8;
+}
+
+
+.plant-img {
+    height: 190px;
+    object-fit: scale-down;
+}

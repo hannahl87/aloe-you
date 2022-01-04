@@ -1,0 +1,21 @@
+.highlight-container {
+    color: var(--fontColor)
+}
+
+.window {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: #FABB51;
+}
+
+.highlight-title h2 {
+    font-family: 'Quicksand',
+    sans-serif;
+    font-size: larger;
+}
+
+.highlight-title span {
+    font-family: 'Oxygen',
+    sans-serif;
+    font-size: small;
+}

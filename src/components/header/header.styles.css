@@ -1,0 +1,17 @@
+.nav {
+    font-family: 'Quicksand',
+    sans-serif;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.logo-link h2 {
+    font-size: larger;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
