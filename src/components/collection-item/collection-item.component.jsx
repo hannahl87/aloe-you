@@ -1,9 +1,10 @@
 import React from 'react';
+import FormButton from '../form-button/form-button.component';
 
 import './collection-item.styles.css';
 
 const CollectionItem = ({ id, name, price, imageUrl }) => (
-  <div className='collection-item flex flex-col mb-4 cursor-pointer col-span-1'>
+  <div className='collection-item flex flex-col mb-4 col-span-2 sm:col-span-1'>
     <div className='top-card flex justify-center rounded-t-xl'>
       <img
         src={imageUrl}
@@ -11,9 +12,10 @@ const CollectionItem = ({ id, name, price, imageUrl }) => (
         className='collection-img rounded-t-xl'
       />
     </div>
-    <div className='collection-footer flex justify -between rounded-b-xl p-2'>
+    <div className='collection-footer flex justify-between  rounded-b-xl p-2'>
       <span className='name text-white'>{name}</span>
       <span className='price'>£{price}</span>
+      <FormButton>Add to cart</FormButton>
     </div>
   </div>
 );

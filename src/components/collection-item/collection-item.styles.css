@@ -1,7 +1,8 @@
 .collection-item {
-    min-height: 220px;
-    max-height: 220px;
+    flex: 1;
     font-size: 14px;
+    position: relative;
+    width: 180px;
 }
 
 .collection-img {
@@ -22,4 +23,18 @@
 
 .top-card {
     background-color: #F7F7F7;
+}
+
+
+.collection-item .form-btn {
+    display: none;
+}
+
+.collection-item:hover .form-btn {
+    display: block;
+    position: absolute;
+    top: 150px;
+    width: 70%;
+    opacity: 0.7;
+    left: 26px;
 }
