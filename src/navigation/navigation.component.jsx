@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import logo from '../../assets/images/logo.webp';
+import logo from '../assets/images/logo.webp';
 import './navigation.styles.scss';
 
 import { connect } from 'react-redux';
 
-import { auth } from '../../firebase/firebase.utils';
-import CartIcon from '../cart-icon/cart-icon.component';
-import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import { auth } from '../firebase/firebase.utils';
+import CartIcon from '../components/cart-icon/cart-icon.component';
+import CartDropdown from '../components/cart-dropdown/cart-dropdown.component';
 
 const Navigation = ({ currentUser, hidden }) => (
   <div>
