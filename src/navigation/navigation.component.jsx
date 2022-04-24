@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import logo from '../assets/images/logo.webp';
 import './navigation.styles.scss';
@@ -10,7 +10,7 @@ import CartIcon from '../components/cart-icon/cart-icon.component';
 import CartDropdown from '../components/cart-dropdown/cart-dropdown.component';
 
 const Navigation = ({ currentUser, hidden }) => (
-  <div>
+  <Fragment>
     <header className='nav flex my-4 mx-6 justify-between'>
       <Link className='logo-link flex' to='/aloe-you'>
         <img src={logo} alt='Logo of a green monstera leaf' className='logo' />
@@ -51,7 +51,7 @@ const Navigation = ({ currentUser, hidden }) => (
       {hidden ? null : <CartDropdown />}
     </header>
     <Outlet />
-  </div>
+  </Fragment>
 );
 
 const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
