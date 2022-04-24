@@ -1,7 +1,7 @@
 import React from 'react';
 import FormButton from '../form-button/form-button.component';
 
-import './collection-item.styles.css';
+import './collection-item.styles.scss';
 
 const CollectionItem = ({ id, name, price, imageUrl }) => (
   <div className='collection-item flex flex-col mb-4 col-span-2 sm:col-span-1'>

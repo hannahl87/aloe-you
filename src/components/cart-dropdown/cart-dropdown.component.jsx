@@ -1,5 +1,5 @@
 import React from 'react';
-import './cart-dropdown.styles.css';
+import './cart-dropdown.styles.scss';
 import CtaButton from '../cta-button.component.css/cta-button.component';
 
 const CartDropdown = () => (

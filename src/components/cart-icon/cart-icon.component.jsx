@@ -1,5 +1,5 @@
 import React from 'react';
-import './cart-icon.styles.css';
+import './cart-icon.styles.scss';
 import { connect } from 'react-redux';
 
 import { toggleCartHidden } from '../../redux/cart/cart.actions';

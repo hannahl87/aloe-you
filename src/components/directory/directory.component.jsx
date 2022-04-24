@@ -1,6 +1,6 @@
 import React from 'react';
 import ShopCard from '../shop-card/shop-card.component';
-import './directory.styles.css';
+import './directory.styles.scss';
 import monstera from '../../assets/images/monstera.webp';
 import pothos from '../../assets/images/scindapusus.webp';
 import rubber from '../../assets/images/rubber-plant.webp';

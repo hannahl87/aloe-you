@@ -1,5 +1,5 @@
 import React from 'react';
-import './cta-button.styles.css';
+import './cta-button.styles.scss';
 
 const CtaButton = ({ text }) => (
   <div className='cta-container'>

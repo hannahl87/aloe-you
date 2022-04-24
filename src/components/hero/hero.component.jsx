@@ -1,5 +1,5 @@
 import React from 'react';
-import './hero.styles.css';
+import './hero.styles.scss';
 import Directory from '../directory/directory.component';
 
 const Hero = () => (

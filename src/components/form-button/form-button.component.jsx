@@ -1,5 +1,5 @@
 import React from 'react';
-import './form-button.styles.css';
+import './form-button.styles.scss';
 
 const FormButton = ({ children, ...otherProps }) => (
   <div className='btn-container'>

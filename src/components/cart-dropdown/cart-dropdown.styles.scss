@@ -1,0 +1,16 @@
+.cart-dropdown {
+  width: 240px;
+  height: 340px;
+  background-color: #f7f7f7;
+  top: 64px;
+  right: 24px;
+  z-index: 5;
+
+  .cart-items {
+    height: 240px;
+  }
+
+  button {
+    margin-top: auto;
+  }
+}
