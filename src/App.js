@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import Header from './components/header/header.component';
+import Navigation from './components/navigation/navigation.component';
 import Homepage from './routes/homepage/homepage.component';
 import ShopPage from './routes/shop/shop.component';
 import LoginSignUpPage from './routes/login-signup/login-signup.component';
@@ -37,20 +37,21 @@ class App extends React.Component {
     return (
       <div>
         <div className='h-screen'>
-          <Header />
           <Routes>
-            <Route path='/aloe-you' element={<Homepage />} />
-            <Route path='/aloe-you/shop' element={<ShopPage />} />
-            <Route
-              path='/aloe-you/login'
-              element={
-                this.props.currentUser ? (
-                  <Navigate to='/aloe-you' />
-                ) : (
-                  <LoginSignUpPage />
-                )
-              }
-            />
+            <Route path='/' element={<Navigation />}>
+              <Route index path='aloe-you' element={<Homepage />} />
+              <Route path='aloe-you/shop' element={<ShopPage />} />
+              <Route
+                path='aloe-you/login'
+                element={
+                  this.props.currentUser ? (
+                    <Navigate to='/aloe-you' />
+                  ) : (
+                    <LoginSignUpPage />
+                  )
+                }
+              />
+            </Route>
           </Routes>
         </div>
       </div>
