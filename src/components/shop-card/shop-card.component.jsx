@@ -1,4 +1,3 @@
-import React from 'react';
 import './shop-card.styles.scss';
 
 const ShopCard = ({ type, img }) => (

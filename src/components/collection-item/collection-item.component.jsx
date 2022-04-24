@@ -1,4 +1,3 @@
-import React from 'react';
 import FormButton from '../form-button/form-button.component';
 
 import './collection-item.styles.scss';

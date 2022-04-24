@@ -1,4 +1,3 @@
-import React from 'react';
 import './cart-icon.styles.scss';
 import { connect } from 'react-redux';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import './highlight.styles.scss';
 import sans from '../../assets/images/sans.webp';
 import CtaButton from '../cta-button.component.css/cta-button.component';
