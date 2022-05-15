@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import { UserProvider } from './contexts/user.context';
+import { ProductsProvider } from './contexts/products.context';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -16,7 +17,9 @@ root.render(
     <BrowserRouter basename={'/'}>
       <React.StrictMode>
         <UserProvider>
-          <App />
+          <ProductsProvider>
+            <App />
+          </ProductsProvider>
         </UserProvider>
       </React.StrictMode>
     </BrowserRouter>
