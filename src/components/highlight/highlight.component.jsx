@@ -1,6 +1,6 @@
 import './highlight.styles.scss';
 import sans from '../../assets/images/sans.webp';
-import CtaButton from '../cta-button.component.css/cta-button.component';
+import CtaButton from '../cta-button/cta-button.component';
 
 const Highlight = () => (
   <div className='highlight-container ml-14 hidden md:inline md:col-span-2 mr-6 flex-1'>

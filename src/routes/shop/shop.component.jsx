@@ -18,7 +18,7 @@ const Shop = () => {
             <h1 className='preview-title ml-2 my-4'>{title.toUpperCase()}</h1>
             <div className='preview grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4'>
               {newProducts.map((product) => {
-                return <ProductCard product={product} />;
+                return <ProductCard key={product.id} product={product} />;
               })}
             </div>
           </div>
