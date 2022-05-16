@@ -7,9 +7,18 @@ import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import { CartContext } from '../../contexts/cart.context';
 
 const CartIcon = () => {
-  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+  const { cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
 
   const toggleCartOpen = () => setIsCartOpen(!isCartOpen);
+
+  const getQuantity = () => {
+    let quantity = 0;
+    cartItems.forEach((item) => {
+      quantity += item.quantity;
+    });
+    console.log('quantity :', quantity);
+    return quantity;
+  };
 
   return (
     <div
@@ -17,7 +26,9 @@ const CartIcon = () => {
       className='cart-icon relative flex items-end hover:scale-125 cursor-pointer'
     >
       <ShoppingIcon />
-      <span className='count absolute'>1</span>
+      <span className='count absolute'>
+        {getQuantity() < 1 ? '' : getQuantity()}
+      </span>
     </div>
   );
 };
