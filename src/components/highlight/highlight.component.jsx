@@ -18,7 +18,7 @@ const Highlight = () => (
         oxygen levels.
       </span>
     </div>
-    <CtaButton text='From $9 - Shop Now' />
+    <CtaButton link='shop/Air-Purifying' text='From $9 - Shop Now' />
   </div>
 );
 

@@ -16,7 +16,6 @@ const CartIcon = () => {
     cartItems.forEach((item) => {
       quantity += item.quantity;
     });
-    console.log('quantity :', quantity);
     return quantity;
   };
 

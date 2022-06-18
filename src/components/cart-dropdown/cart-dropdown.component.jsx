@@ -13,7 +13,7 @@ const CartDropdown = () => {
           return <CartItem key={item.id} cartItem={item} />;
         })}
       </div>
-      <CtaButton text='Go to Checkout' />
+      <CtaButton link='aloe-you/basket' text='Go to Basket' />
     </div>
   );
 };

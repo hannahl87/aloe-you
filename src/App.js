@@ -12,6 +12,7 @@ import {
 } from './utils/firebase/firebase.utils';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
+import Basket from './routes/basket/basket.component';
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -47,6 +48,7 @@ const App = () => {
             <Route index path='aloe-you' element={<Homepage />} />
             <Route path='aloe-you/shop' element={<ShopPage />} />
             <Route path='aloe-you/shop/:type' element={<ShopPage />} />
+            <Route path='aloe-you/basket' element={<Basket />} />
             <Route
               path='aloe-you/login'
               element={
