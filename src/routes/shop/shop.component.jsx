@@ -1,12 +1,20 @@
 import * as _ from 'lodash';
 import { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import { ProductsContext } from '../../contexts/products.context';
 import './shop.styles.scss';
 import ProductCard from '../../components/product-card/product-card.component';
 
 const Shop = () => {
-  const { products } = useContext(ProductsContext);
-  const titles = Object.keys(_.groupBy(products, 'type'));
+  const location = useLocation();
+  const type = location.pathname.split('/').pop() ?? null;
+  let { products } = useContext(ProductsContext);
+  let titles = Object.keys(_.groupBy(products, 'type'));
+  if (type && type !== 'shop') {
+    titles = [type];
+    products = products.filter((o) => type === o.type.find((o) => o === type));
+  }
+
   return (
     <div className='shop-page mt-20 mx-14'>
       {titles.map((title) => {

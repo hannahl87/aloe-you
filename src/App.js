@@ -46,6 +46,7 @@ const App = () => {
           <Route path='/' element={<Navigation />}>
             <Route index path='aloe-you' element={<Homepage />} />
             <Route path='aloe-you/shop' element={<ShopPage />} />
+            <Route path='aloe-you/shop/:type' element={<ShopPage />} />
             <Route
               path='aloe-you/login'
               element={

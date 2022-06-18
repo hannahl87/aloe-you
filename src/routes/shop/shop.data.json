@@ -5,7 +5,7 @@
         "imageUrl":
           "https://cdn.shopify.com/s/files/1/0105/6833/5411/products/Marantha_1200x1200.jpg?v=1611329554",
         "price": "15",
-        "type": ["Easy Care"]
+        "type": ["Easy-Care"]
       },
       {
         "id": 2,
@@ -13,7 +13,7 @@
         "imageUrl":
           "https://balconygardenweb-lhnfx0beomqvnhspx.netdna-ssl.com/wp-content/uploads/2018/10/18.-Pothos.jpg",
         "price": 12,
-        "type": ["Easy Care"]
+        "type": ["Easy-Care"]
       },
       {
         "id": 3,
@@ -21,7 +21,7 @@
         "imageUrl":
           "https://www.thespruce.com/thmb/iRVUHcJUa_QdnTn_Qh5boAXRJ_Y=/1536x1536/smart/filters:no_upscale()/grow-grafted-ruby-ball-cactus-1902604-HERO-6077451839534c4385d6db0ebe47d640.jpg",
         "price": 6,
-        "type": ["Easy Care"]
+        "type": ["Easy-Care"]
       },
       {
         "id": 4,
@@ -29,7 +29,7 @@
         "imageUrl":
           "https://www.gardenersdream.co.uk/images/ficus-robusta-rubber-plant-p4799-37878_image.jpg",
         "price": 8,
-        "type": ["Easy Care"]
+        "type": ["Easy-Care"]
       },
       {
         "id": 5,
@@ -37,7 +37,7 @@
         "imageUrl":
           "https://m.media-amazon.com/images/I/81Bk7QKpidL._AC_SL1500_.jpg",
         "price": 15,
-        "type": ["Easy Care"]
+        "type": ["Easy-Care"]
       },
       {
         "id": 6,
@@ -45,7 +45,7 @@
         "imageUrl":
           "https://i.etsystatic.com/24118283/r/il/81cb94/2460674536/il_570xN.2460674536_39dw.jpg",
         "price": 11,
-        "type": ["Pet Friendly"]
+        "type": ["Pet-Friendly"]
       },
       {
         "id": 7,
@@ -53,7 +53,7 @@
         "imageUrl":
           "https://m.media-amazon.com/images/I/81nSgvRCD2S._AC_SX466_.jpg",
         "price": 24,
-        "type": ["Pet Friendly"]
+        "type": ["Pet-Friendly"]
       },
       {
         "id": 8,
@@ -61,7 +61,7 @@
         "imageUrl":
           "https://thelittlebotanical.com/wp-content/uploads/2019/03/07_JT_006_1000x1000.jpg",
         "price": 18,
-        "type": ["Pet Friendly"]
+        "type": ["Pet-Friendly"]
       },
       {
         "id": 9,
@@ -69,7 +69,7 @@
         "imageUrl":
           "https://cdn.shopify.com/s/files/1/1706/1307/products/Aspidistra-Cast-Iron-Plant-90cm-Hortology.jpg?v=1587912852",
         "price": 16,
-        "type": ["Pet Friendly"]
+        "type": ["Pet-Friendly"]
       },
       {
         "id": 10,
@@ -77,7 +77,7 @@
         "imageUrl":
           "https://i.etsystatic.com/10494852/r/il/783855/2029326287/il_fullxfull.2029326287_897x.jpg",
         "price": 7,
-        "type": ["Pet Friendly"]
+        "type": ["Pet-Friendly"]
       },
       {
         "id": 11,
@@ -85,7 +85,7 @@
         "imageUrl":
           "https://www.gardeningknowhow.com/wp-content/uploads/2007/05/kentia-palm1.jpg",
         "price": 35,
-        "type": ["Pet Friendly"]
+        "type": ["Pet-Friendly"]
       },
       {
         "id": 12,
@@ -93,7 +93,7 @@
         "imageUrl":
           "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1619636690-41fifZkP1ML._SL500_.jpg",
         "price": 35,
-        "type": ["Pet Friendly"]
+        "type": ["Pet-Friendly"]
       },
       {
         "id": 13,
@@ -101,7 +101,7 @@
         "imageUrl":
           "https://i.etsystatic.com/14339179/r/il/a8823f/2359005661/il_fullxfull.2359005661_8u10.jpg",
         "price": 14,
-        "type": ["Pet Friendly"]
+        "type": ["Pet-Friendly"]
       },
       {
         "id": 14,
@@ -109,7 +109,7 @@
         "imageUrl":
           "https://thelittlebotanical.com/wp-content/uploads/2020/09/21_JT_020_1000x1000.jpg",
         "price": 10,
-        "type": ["Low Light"]
+        "type": ["Low-Light"]
       },
       {
         "id": 15,
@@ -117,7 +117,7 @@
         "imageUrl":
           "https://cdn.shopify.com/s/files/1/1807/1961/products/IMG_0783_2048x.jpg?v=1586118449",
         "price": 9,
-        "type": ["Low Light"]
+        "type": ["Low-Light"]
 
       },
       {
@@ -126,7 +126,7 @@
         "imageUrl":
           "https://cdn.shopify.com/s/files/1/1706/1307/products/Alocasia-portodora.jpg?v=1604245648",
         "price": 9,
-        "type": ["Low Light"]
+        "type": ["Low-Light"]
 
       },
       {
@@ -135,7 +135,7 @@
         "imageUrl":
           "https://res.cloudinary.com/alexflorisca/image/fetch/q_auto,f_auto/https://cdn.shopify.com/s/files/1/0086/5429/1040/products/twig-plants-happy-leaf-pothos-4-2_large.jpg%3Fv%3D1623246976",
         "price": 15,
-        "type": ["Low Light"]
+        "type": ["Low-Light"]
       },
       {
         "id": 18,
@@ -143,7 +143,7 @@
         "imageUrl":
           "https://cdn.shopify.com/s/files/1/0045/4613/4065/products/fusion_900x.jpg?v=1633008943",
         "price": 18,
-        "type": ["Low Light"]
+        "type": ["Low-Light"]
       },
       {
         "id": 19,
@@ -151,7 +151,7 @@
         "imageUrl":
           "https://thelittlebotanical.com/wp-content/uploads/2021/02/24_JT_024_1000x1000-600x600.jpg",
         "price": 25,
-        "type": ["Air Purifying"]
+        "type": ["Air-Purifying"]
 
       },
       {
@@ -160,7 +160,7 @@
         "imageUrl":
           "https://cdn.shopify.com/s/files/1/1706/1307/products/Ficus-lyrata-Fiddle-Leaf-Fig-Scandi-Woven-Basket-White-Weave_1200x.jpg?v=1618919248",
         "price": 20,
-        "type": ["Air Purifying"]
+        "type": ["Air-Purifying"]
       },
       {
         "id": 21,
@@ -168,7 +168,7 @@
         "imageUrl":
           "https://blog.omysa.com/wp-content/uploads/2020/08/How-to-Care-for-Your-English-Ivy-Plant.jpg",
         "price": 80,
-        "type": ["Air Purifying"]
+        "type": ["Air-Purifying"]
       },
       {
         "id": 22,
@@ -176,7 +176,7 @@
         "imageUrl":
           "https://cdn.shopify.com/s/files/1/1706/1307/products/Chlorophytum-Bonnie-Curly-Spider-Plant-Mini-Bucket-Plant-Pot-Grey-Washed_44eb0987-37e1-43bb-8493-fcf4ddb826e4_1200x.jpg?v=1620212325",
         "price": 80,
-        "type": ["Air Purifying"]
+        "type": ["Air-Purifying"]
       },
       {
         "id": 23,
@@ -184,7 +184,7 @@
         "imageUrl":
           "https://cdn.shopify.com/s/files/1/1706/1307/products/Aloe-vera-Thies-Plant-Pot-Mustard_1200x.jpg?v=1615971339",
         "price": 45,
-        "type": ["Air Purifying"]
+        "type": ["Air-Purifying"]
       },
       {
         "id": 24,
@@ -192,7 +192,7 @@
         "imageUrl":
           "https://www.epicgardening.com/wp-content/uploads/2017/02/broadleaf-lady-palm-tree.jpg",
         "price": 13,
-        "type": ["Air Purifying"]
+        "type": ["Air-Purifying"]
       },
       {
         "id": 25,
@@ -200,7 +200,7 @@
         "imageUrl":
           "https://www.houseplantsexpert.com/image-files/ficus-benjamina.jpg",
         "price": 20,
-        "type": ["Air Purifying"]
+        "type": ["Air-Purifying"]
       },
       {
         "id": 26,

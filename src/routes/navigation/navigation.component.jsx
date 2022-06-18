@@ -29,14 +29,14 @@ const Navigation = () => {
           <h2 className='company-name flex items-end ml-2'>Aloe You</h2>
         </Link>
         <nav className='nav-links items-end hidden md:flex space-x-11'>
+          <Link to='/aloe-you' className='hover:text-teal-400'>
+            Home
+          </Link>
           <Link to='/aloe-you/shop' className='hover:text-teal-400'>
             Shop
           </Link>
           <Link to='/aloe-you/shop' className='hover:text-teal-400'>
             About
-          </Link>
-          <Link to='/aloe-you/shop' className='hover:text-teal-400'>
-            Care
           </Link>
           <Link to='/aloe-you/shop' className='hover:text-teal-400'>
             Contact

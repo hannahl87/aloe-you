@@ -13,17 +13,17 @@ class Directory extends React.Component {
       categories: [
         {
           id: 1,
-          title: 'Easy care',
+          title: 'Easy-Care',
           img: rubber,
         },
         {
           id: 2,
-          title: 'Pet Friendly',
+          title: 'Pet-Friendly',
           img: monstera,
         },
         {
           id: 3,
-          title: 'Low Light',
+          title: 'Low-Light',
           img: pothos,
         },
       ],
