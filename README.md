@@ -20,6 +20,6 @@ The following has been built:
 - Firebase sign up
 - Firebase Google auth
 - Firebase login
-- Cart Dropdown
+- Basket Dropdown
 
 Please check back for progress.

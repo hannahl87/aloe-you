@@ -1,13 +1,13 @@
 import { useContext } from 'react';
-import { CartContext } from '../../contexts/cart.context';
+import { BasketContext } from '../../contexts/basket.context';
 import FormButton from '../form-button/form-button.component';
 
 import './product-card.styles.scss';
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
-  const { addItemToCart } = useContext(CartContext);
-  const addProductToCart = () => addItemToCart(product);
+  const { addItemToBasket } = useContext(BasketContext);
+  const addProductToBasket = () => addItemToBasket(product);
 
   return (
     <div className='collection-item flex flex-col mb-4 col-span-2 sm:col-span-1'>
@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
       <div className='collection-footer flex justify-between  rounded-b-xl p-2'>
         <span className='name text-white'>{name}</span>
         <span className='price'>£{price}</span>
-        <FormButton onClick={addProductToCart}>Add to cart</FormButton>
+        <FormButton onClick={addProductToBasket}>Add to basket</FormButton>
       </div>
     </div>
   );

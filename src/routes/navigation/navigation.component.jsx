@@ -2,16 +2,16 @@ import { Fragment, useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import logo from '../../assets/images/logo.webp';
 import { UserContext } from '../../contexts/user.context';
-import { CartContext } from '../../contexts/cart.context';
+import { BasketContext } from '../../contexts/basket.context';
 import { connect } from 'react-redux';
 import { signUserOut } from '../../utils/firebase/firebase.utils';
-import CartIcon from '../../components/cart-icon/cart-icon.component';
-import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
+import BasketIcon from '../../components/basket-icon/basket-icon.component';
+import BasketDropdown from '../../components/basket-dropdown/basket-dropdown.component';
 import './navigation.styles.scss';
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  const { isCartOpen } = useContext(CartContext);
+  const { isBasketOpen } = useContext(BasketContext);
 
   const signOutHandler = async () => {
     await signUserOut();
@@ -43,7 +43,7 @@ const Navigation = () => {
           </Link>
         </nav>
         <div className='utils flex'>
-          <CartIcon />
+          <BasketIcon />
           {currentUser ? (
             <div
               className='login flex items-end ml-4 hover:text-teal-400 text-m cursor-pointer'
@@ -60,14 +60,14 @@ const Navigation = () => {
             </Link>
           )}
         </div>
-        {isCartOpen && <CartDropdown />}
+        {isBasketOpen && <BasketDropdown />}
       </header>
       <Outlet />
     </Fragment>
   );
 };
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+const mapStateToProps = ({ user: { currentUser }, basket: { hidden } }) => ({
   currentUser,
   hidden,
 });

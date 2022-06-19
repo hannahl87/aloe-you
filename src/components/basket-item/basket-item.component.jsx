@@ -1,13 +1,13 @@
-import './cart-item.styles.scss';
+import './basket-item.styles.scss';
 
-const CartItem = ({ cartItem }) => {
-  const { name, imageUrl, price, quantity } = cartItem;
+const BasketItem = ({ basketItem }) => {
+  const { name, imageUrl, price, quantity } = basketItem;
 
   return (
-    <div className='cart-item flex my-1'>
+    <div className='basket-item flex my-1'>
       <div className='img-container'>
         <img
-          className='cart-img flex justify-start rounded-sm'
+          className='basket-img flex justify-start rounded-sm'
           src={imageUrl}
           alt='item'
         />
@@ -22,4 +22,4 @@ const CartItem = ({ cartItem }) => {
   );
 };
 
-export default CartItem;
+export default BasketItem;

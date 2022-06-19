@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { CartContext } from '../../contexts/cart.context';
+import { BasketContext } from '../../contexts/basket.context';
 import './basket-card.component.scss';
 
 const BasketCard = ({ item }) => {
-  const { addItemToCart, removeItem } = useContext(CartContext);
-  const addProductToCart = () => addItemToCart(item);
+  const { addItemToBasket, removeItem } = useContext(BasketContext);
+  const addProductToBasket = () => addItemToBasket(item);
   const removeProduct = () => removeItem(item);
 
   console.log('item :', item);
@@ -25,7 +25,7 @@ const BasketCard = ({ item }) => {
             -{' '}
           </button>
           {item.quantity}
-          <button onClick={addProductToCart} className='plus m-2'>
+          <button onClick={addProductToBasket} className='plus m-2'>
             {' '}
             +{' '}
           </button>
