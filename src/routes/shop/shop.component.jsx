@@ -8,7 +8,9 @@ import ProductCard from '../../components/product-card/product-card.component';
 const Shop = () => {
   const location = useLocation();
   const type = location.pathname.split('/').pop() ?? null;
+  const plantsCategory = 0;
   let { products } = useContext(ProductsContext);
+  products = products[plantsCategory];
   let titles = Object.keys(_.groupBy(products, 'type'));
   if (type && type !== 'shop') {
     titles = [type];
@@ -36,6 +38,6 @@ const Shop = () => {
       })}
     </div>
   );
-};
+};;
 
 export default Shop;
