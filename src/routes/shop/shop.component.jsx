@@ -16,15 +16,17 @@ const Shop = () => {
   }
 
   return (
-    <div className='shop-page mt-20 mx-14'>
+    <div className='shop-page flex flex-col items-center mt-20 mx-14'>
       {titles.map((title) => {
         const newProducts = products.filter((product) => {
           return product.type.includes(title);
         });
         return (
           <div key={title} className='collection-preview mt-20 mx-14'>
-            <h1 className='preview-title ml-2 my-4'>{title.toUpperCase()}</h1>
-            <div className='preview grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4'>
+            <h1 className='preview-title flex justify-center sm:justify-start ml-2 my-4'>
+              {title.toUpperCase()}
+            </h1>
+            <div className='preview grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 content-center'>
               {newProducts.map((product) => {
                 return <ProductCard key={product.id} product={product} />;
               })}
