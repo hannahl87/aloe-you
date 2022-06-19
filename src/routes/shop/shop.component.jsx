@@ -22,7 +22,7 @@ const Shop = () => {
           return product.type.includes(title);
         });
         return (
-          <div className='collection-preview mt-20 mx-14'>
+          <div key={title} className='collection-preview mt-20 mx-14'>
             <h1 className='preview-title ml-2 my-4'>{title.toUpperCase()}</h1>
             <div className='preview grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4'>
               {newProducts.map((product) => {
