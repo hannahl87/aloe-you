@@ -1,28 +1,29 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
-const addBasketItem = (basketItems, productToAdd, total) => {
+const addBasketItem = (basketItems, productToAdd) => {
   const existingBasketItem = basketItems.find(
     (basketItem) => basketItem.id === productToAdd.id
   );
 
   if (existingBasketItem) {
-    return (
-      basketItems.map((basketItem) =>
-        basketItem.id === productToAdd.id
-          ? {
-              ...basketItem,
-              quantity: basketItem.quantity + 1,
-            }
-          : basketItem
-      ),
-      total + productToAdd.price
+    basketItems = basketItems.map((basketItem) =>
+      basketItem.id === productToAdd.id
+        ? {
+            ...basketItem,
+            quantity: basketItem.quantity + 1,
+          }
+        : basketItem
     );
+    return basketItems;
   }
-
-  return [...basketItems, { ...productToAdd, quantity: 1 }], total;
+  return [...basketItems, { ...productToAdd, quantity: 1 }];
 };
 
-const removeBasketItem = (basketItems, productToRemove, total) => {
+const removeFromBasket = (basketItems, existingBasketItem) => {
+  return basketItems.splice(basketItems.indexOf(existingBasketItem), 1);
+};
+
+const decreaseBasketItem = (basketItems, productToRemove) => {
   const existingBasketItem = basketItems.find(
     (basketItem) => basketItem.id === productToRemove.id
   );
@@ -36,20 +37,11 @@ const removeBasketItem = (basketItems, productToRemove, total) => {
           }
         : basketItem
     );
-    total = total -= productToRemove.price;
-    return basketItems, total;
+    return basketItems;
   }
-  basketItems.splice(basketItems.indexOf(existingBasketItem), 1);
-  return [...basketItems, total];
+  removeFromBasket(basketItems, existingBasketItem);
+  return [...basketItems];
 };
-
-// const basketTotal = (total, basketItems) => {
-//   basketItems.forEach((item) => {
-//     total += item.price * item.quantity;
-//   });
-//   console.log('total :', total);
-//   return total;
-// };
 
 export const BasketContext = createContext({
   isBasketOpen: false,
@@ -57,23 +49,28 @@ export const BasketContext = createContext({
   basketItems: [],
   addItemToBasket: () => {},
   removeItem: () => {},
-  total: 0,
+  basketTotal: 0,
 });
 
 export const BasketProvider = ({ children }) => {
   const [isBasketOpen, setIsBasketOpen] = useState(false);
-  const [basketItems, setBasketItems, total] = useState([]);
+  const [basketItems, setBasketItems] = useState([]);
+  const [basketTotal, setBasketTotal] = useState(0);
 
   const addItemToBasket = (productToAdd) => {
     setBasketItems(addBasketItem(basketItems, productToAdd));
   };
   const removeItem = (productToRemove) => {
-    setBasketItems(removeBasketItem(basketItems, productToRemove));
+    setBasketItems(decreaseBasketItem(basketItems, productToRemove));
   };
-  // const getBasketTotal = () => {
-  //   console.log('here !');
-  //   setBasketTotal(basketTotal(basketItems));
-  // };
+
+  useEffect(() => {
+    const newBasketTotal = basketItems.reduce(
+      (total, basketItem) => (total += basketItem.price * basketItem.quantity),
+      0
+    );
+    setBasketTotal(newBasketTotal);
+  }, [basketItems]);
 
   const value = {
     isBasketOpen,
@@ -81,7 +78,7 @@ export const BasketProvider = ({ children }) => {
     basketItems,
     addItemToBasket,
     removeItem,
-    total,
+    basketTotal,
   };
   return (
     <BasketContext.Provider value={value}> {children} </BasketContext.Provider>

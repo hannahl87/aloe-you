@@ -7,7 +7,6 @@ const BasketCard = ({ item }) => {
   const addProductToBasket = () => addItemToBasket(item);
   const removeProduct = () => removeItem(item);
 
-  console.log('item :', item);
   return (
     <div className='basket-card flex m-4'>
       <img
@@ -17,7 +16,6 @@ const BasketCard = ({ item }) => {
       />
       <div className='details flex flex-col'>
         <h3 className='item-name'>{item.name}</h3>
-        <div className='price'>£{item.price}</div>
         <div className='quantity'>
           Quantity:
           <button onClick={removeProduct} className='minus m-2'>
@@ -30,6 +28,7 @@ const BasketCard = ({ item }) => {
             +{' '}
           </button>
         </div>
+        <div className='price'>£{item.price * item.quantity}</div>
       </div>
     </div>
   );

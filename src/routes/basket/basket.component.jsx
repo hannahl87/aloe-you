@@ -4,14 +4,16 @@ import { BasketContext } from '../../contexts/basket.context';
 import './basket.component.scss';
 
 const Basket = () => {
-  const { basketItems } = useContext(BasketContext);
-  console.log('basketItems :', basketItems);
+  const { basketItems, basketTotal } = useContext(BasketContext);
 
   return (
     <div className='basket-page mt-20 mx-14'>
-      {basketItems.map((item) => {
-        return <BasketCard key={item.id} item={item} />;
-      })}
+      <div className='items'>
+        {basketItems.map((item) => {
+          return <BasketCard key={item.id} item={item} />;
+        })}
+      </div>
+      <div className='total flex justify-end'>Total: £{basketTotal}</div>
     </div>
   );
 };
