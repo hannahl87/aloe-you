@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { BasketContext } from '../../contexts/basket.context';
-import './basket-card.component.scss';
+import './basket-card.styles.scss';
 
 const BasketCard = ({ item }) => {
   const { addItemToBasket, removeItem } = useContext(BasketContext);

@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import BasketCard from '../../components/basket-card/basket-card.component';
 import CtaButton from '../../components/cta-button/cta-button.component';
 import { BasketContext } from '../../contexts/basket.context';
-import './basket.component.scss';
+import './basket.styles.scss';
 
 const Basket = () => {
   const { basketItems, basketTotal, setIsBasketOpen } =
@@ -29,8 +29,7 @@ const Basket = () => {
         </>
       ) : (
         <div className='empty-basket'>
-          {' '}
-          You don't have any products in your basket{' '}
+          You don't have any products in your basket
         </div>
       )}
     </div>
