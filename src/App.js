@@ -6,39 +6,12 @@ import Navigation from './routes/navigation/navigation.component';
 import Homepage from './routes/homepage/homepage.component';
 import ShopPage from './routes/shop/shop.component';
 import LoginSignUpPage from './routes/login-signup/login-signup.component';
-import {
-  auth,
-  createUserProfileDocument,
-} from './utils/firebase/firebase.utils';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
 import Basket from './routes/basket/basket.component';
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
-
-  // unsubscribeFromAuth = null;
-
-  // componentDidMount() {
-  //   const { setCurrentUser } = this.props;
-  //   this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-  //     if (userAuth) {
-  //       const userRef = await createUserProfileDocument(userAuth);
-  //       userRef.onSnapshot((snapshot) => {
-  //         setCurrentUser({
-  //           id: snapshot.id,
-  //           ...snapshot.data(),
-  //         });
-  //       });
-  //     } else {
-  //       setCurrentUser(userAuth);
-  //     }
-  //   });
-  // }
-
-  // componentWillUnmount() {
-  //   this.unsubscribeFromAuth();
-  // }
 
   return (
     <div>
