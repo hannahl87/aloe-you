@@ -21,5 +21,7 @@ The following has been built:
 - Firebase Google auth
 - Firebase login
 - Basket Dropdown
+- Basket Page
+- Add products to basket
 
 Please check back for progress.
