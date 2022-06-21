@@ -9,6 +9,7 @@ import LoginSignUpPage from './routes/login-signup/login-signup.component';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
 import Basket from './routes/basket/basket.component';
+import Checkout from './routes/checkout/checkout.component';
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -22,6 +23,7 @@ const App = () => {
             <Route path='aloe-you/shop' element={<ShopPage />} />
             <Route path='aloe-you/shop/:type' element={<ShopPage />} />
             <Route path='aloe-you/basket' element={<Basket />} />
+            <Route path='aloe-you/basket/checkout' element={<Checkout />} />
             <Route
               path='aloe-you/login'
               element={

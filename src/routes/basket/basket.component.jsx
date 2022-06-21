@@ -24,7 +24,7 @@ const Basket = () => {
           </div>
           <div className='basket-total flex justify-center'>
             <h2 className='total self-center mr-4'>Total: £{basketTotal}</h2>
-            <CtaButton link={'/checkout'} text='Go to Checkout'></CtaButton>
+            <CtaButton link='checkout' text='Go to Checkout' />
           </div>
         </>
       ) : (

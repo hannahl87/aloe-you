@@ -8,8 +8,10 @@ import { ProductsProvider } from './contexts/products.context';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { Elements } from '@stripe/react-stripe-js';
 
 import store from './redux/store';
+import { stripePromise } from './utils/stripe/stripe.utils';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -20,7 +22,9 @@ root.render(
         <UserProvider>
           <ProductsProvider>
             <BasketProvider>
-              <App />
+              <Elements stripe={stripePromise}>
+                <App />
+              </Elements>
             </BasketProvider>
           </ProductsProvider>
         </UserProvider>
