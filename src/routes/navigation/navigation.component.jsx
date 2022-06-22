@@ -35,12 +35,6 @@ const Navigation = () => {
           <Link to='/aloe-you/shop' className='hover:text-teal-400'>
             Shop
           </Link>
-          <Link to='/aloe-you/shop' className='hover:text-teal-400'>
-            About
-          </Link>
-          <Link to='/aloe-you/shop' className='hover:text-teal-400'>
-            Contact
-          </Link>
         </nav>
         <div className='utils flex'>
           <BasketIcon />
