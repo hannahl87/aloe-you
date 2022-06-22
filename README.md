@@ -23,5 +23,14 @@ The following has been built:
 - Basket Dropdown
 - Basket Page
 - Add products to basket
+- Stripe
+- Netlify
+
+TODO not limited to:
+[] Improve UI
+[] Handle loading
+[] Handle payment not submitting twice
+[] Add loading to buttons/ disable additional clicks
+[] Add payment form validation instead of alerts
 
 Please check back for progress.
