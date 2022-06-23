@@ -24,7 +24,12 @@ const PaymentForm = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ amount: basketTotal * 100 }),
-    }).then((res) => res.json());
+    }).then((res) => {
+      console.log(res);
+      const resJ = res.json();
+      console.log('res json', resJ);
+      return resJ;
+    });
 
     const {
       paymentIntent: { client_secret },
@@ -38,6 +43,8 @@ const PaymentForm = () => {
         },
       },
     });
+
+    console.log('payment result', paymentResult);
 
     if (paymentResult.error) {
       alert(paymentResult.error.message);
