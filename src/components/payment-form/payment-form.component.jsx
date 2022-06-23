@@ -22,7 +22,6 @@ const PaymentForm = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json',
       },
       body: JSON.stringify({ amount: basketTotal * 100 }),
     }).then((res) => res.json());
