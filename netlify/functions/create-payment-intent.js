@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
     console.log(error);
 
     return {
-      status: 400,
+      statusCode: 400,
       body: JSON.stringify({ error: error }),
     };
   }
