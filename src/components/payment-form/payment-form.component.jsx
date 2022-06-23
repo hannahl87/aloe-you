@@ -14,12 +14,13 @@ const PaymentForm = () => {
   const paymentHandler = async (e) => {
     e.preventDefault();
 
-    if (!stripe || !elements) {
+    if (!stripe || !elements || !basketTotal) {
+      console.log('missing stripe or elements or basketTotal');
       return;
     }
 
     const response = await fetch('/.netlify/functions/create-payment-intent', {
-      method: 'POST',
+      method: 'post',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -31,11 +32,10 @@ const PaymentForm = () => {
       return resJ;
     });
 
-    const {
-      paymentIntent: { client_secret },
-    } = response;
+    const clientSecret = response.paymentIntent.client_secret;
+    console.log('clientSecret :', clientSecret);
 
-    const paymentResult = await stripe.confirmCardPayment(client_secret, {
+    const paymentResult = await stripe.confirmCardPayment(clientSecret, {
       payment_method: {
         card: elements.getElement(CardElement),
         billing_details: {
