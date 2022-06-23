@@ -32,5 +32,6 @@ TODO not limited to:
 [] Handle payment not submitting twice
 [] Add loading to buttons/ disable additional clicks
 [] Add payment form validation instead of alerts
+[] Check React 18 compatibility with netlify re/ functions (payment not working)
 
 Please check back for progress.
