@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/aloe-you/static/css/main.e9568338.css",
-    "main.js": "/aloe-you/static/js/main.d9af13a7.js",
-    "static/js/377.30e59533.chunk.js": "/aloe-you/static/js/377.30e59533.chunk.js",
-    "static/media/Quicksand-Regular.ttf": "/aloe-you/static/media/Quicksand-Regular.109d09e5f7c827d891ab.ttf",
-    "static/media/sans.webp": "/aloe-you/static/media/sans.9174e005a48085a1cb61.webp",
-    "service-worker.js": "/aloe-you/service-worker.js",
-    "static/media/Oxygen-Regular.ttf": "/aloe-you/static/media/Oxygen-Regular.9d375dd5d21ee7c8c01d.ttf",
-    "static/media/monstera.webp": "/aloe-you/static/media/monstera.c45992c58e04e214c2db.webp",
-    "static/media/rubber-plant.webp": "/aloe-you/static/media/rubber-plant.9a4127cc320ae700f046.webp",
-    "static/media/logo.webp": "/aloe-you/static/media/logo.33021f352bdf9951c92c.webp",
-    "static/media/scindapusus.webp": "/aloe-you/static/media/scindapusus.424ad1c82fd342b8a975.webp",
-    "static/media/shopping-bag.svg": "/aloe-you/static/media/shopping-bag.add4ed0ab825cb5fa8e9ec1f80d137a2.svg",
-    "index.html": "/aloe-you/index.html",
-    "main.e9568338.css.map": "/aloe-you/static/css/main.e9568338.css.map",
-    "main.d9af13a7.js.map": "/aloe-you/static/js/main.d9af13a7.js.map",
-    "377.30e59533.chunk.js.map": "/aloe-you/static/js/377.30e59533.chunk.js.map"
+    "main.css": "/static/css/main.68682e34.css",
+    "main.js": "/static/js/main.b521bf73.js",
+    "static/js/377.30e59533.chunk.js": "/static/js/377.30e59533.chunk.js",
+    "static/media/Quicksand-Regular.ttf": "/static/media/Quicksand-Regular.109d09e5f7c827d891ab.ttf",
+    "static/media/sans.webp": "/static/media/sans.9174e005a48085a1cb61.webp",
+    "service-worker.js": "/service-worker.js",
+    "static/media/Oxygen-Regular.ttf": "/static/media/Oxygen-Regular.9d375dd5d21ee7c8c01d.ttf",
+    "static/media/monstera.webp": "/static/media/monstera.c45992c58e04e214c2db.webp",
+    "static/media/rubber-plant.webp": "/static/media/rubber-plant.9a4127cc320ae700f046.webp",
+    "static/media/logo.webp": "/static/media/logo.33021f352bdf9951c92c.webp",
+    "static/media/scindapusus.webp": "/static/media/scindapusus.424ad1c82fd342b8a975.webp",
+    "static/media/shopping-bag.svg": "/static/media/shopping-bag.add4ed0ab825cb5fa8e9ec1f80d137a2.svg",
+    "index.html": "/index.html",
+    "main.68682e34.css.map": "/static/css/main.68682e34.css.map",
+    "main.b521bf73.js.map": "/static/js/main.b521bf73.js.map",
+    "377.30e59533.chunk.js.map": "/static/js/377.30e59533.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9568338.css",
-    "static/js/main.d9af13a7.js"
+    "static/css/main.68682e34.css",
+    "static/js/main.b521bf73.js"
   ]
 }
