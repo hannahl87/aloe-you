@@ -15,36 +15,30 @@ const PaymentForm = () => {
     e.preventDefault();
 
     if (!stripe || !elements || !basketTotal) {
-      console.log('missing stripe or elements or basketTotal');
       return;
     }
 
-    const response = await fetch('/.netlify/functions/create-payment-intent', {
-      method: 'post',
+    const response = await fetch("/.netlify/functions/create-payment-intent", {
+      method: "post",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ amount: basketTotal * 100 }),
     }).then((res) => {
-      console.log(res);
       const resJ = res.json();
-      console.log('res json', resJ);
       return resJ;
     });
 
     const clientSecret = response.paymentIntent.client_secret;
-    console.log('clientSecret :', clientSecret);
 
     const paymentResult = await stripe.confirmCardPayment(clientSecret, {
       payment_method: {
         card: elements.getElement(CardElement),
         billing_details: {
-          name: 'Hannah Lynn',
+          name: "Hannah Lynn",
         },
       },
     });
-
-    console.log('payment result', paymentResult);
 
     if (paymentResult.error) {
       alert(paymentResult.error.message);

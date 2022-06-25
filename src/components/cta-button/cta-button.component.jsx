@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import './cta-button.styles.scss';
 
 const CtaButton = ({ text, link }) => {
-console.log('link :', link);
   const navigate = useNavigate();
   const goToLink = () => navigate(link);
 
