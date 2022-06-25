@@ -30,10 +30,11 @@ TODO not limited to:
 [] Improve UI
 [] Improve mobile
 [] Handle loading
-[] Handle payment not submitting twice
-[] Add loading to buttons/ disable additional clicks
+[] Handle ability to submit payment twice
+[] Add loading/disable additional clicks
 [] Add payment form validation instead of alerts
-[] Fix stripe auth error with secret key
+[x] Fix stripe auth error with secret key
 [] Handle routing differently for categories
+[] Add confirmation product was added to the basket
 
 Please check back for progress.
