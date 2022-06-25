@@ -28,10 +28,12 @@ The following has been built:
 
 TODO not limited to:
 [] Improve UI
+[] Improve mobile
 [] Handle loading
 [] Handle payment not submitting twice
 [] Add loading to buttons/ disable additional clicks
 [] Add payment form validation instead of alerts
-[] Check React 18 compatibility with netlify re/ functions (payment not working)
+[] Fix stripe auth error with secret key
+[] Handle routing differently for categories
 
 Please check back for progress.
