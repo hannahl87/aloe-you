@@ -39,11 +39,16 @@ const Navigation = () => {
         <div className='utils flex'>
           <BasketIcon />
           {currentUser ? (
-            <div
-              className='login flex items-end ml-4 hover:text-teal-400 text-m cursor-pointer'
-              onClick={signOutHandler}
-            >
-              Logout
+            <div className='user'>
+              <Link to='/aloe-you/my-account' className='hover:text-teal-400'>
+                My Account
+              </Link>
+              <div
+                className='login flex items-end ml-4 hover:text-teal-400 text-m cursor-pointer'
+                onClick={signOutHandler}
+              >
+                Logout
+              </div>
             </div>
           ) : (
             <Link
