@@ -12,6 +12,7 @@ import { Elements } from '@stripe/react-stripe-js';
 
 import store from './redux/store';
 import { stripePromise } from './utils/stripe/stripe.utils';
+import { CustomerProvider } from './contexts/customer.context';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -23,7 +24,9 @@ root.render(
           <ProductsProvider>
             <BasketProvider>
               <Elements stripe={stripePromise}>
-                <App />
+                <CustomerProvider>
+                  <App />
+                </CustomerProvider>
               </Elements>
             </BasketProvider>
           </ProductsProvider>

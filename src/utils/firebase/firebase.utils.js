@@ -96,16 +96,25 @@ export const createUserProfileDocument = async (
   return userRef;
 };
 
-const createCustomerDocument = (userAuth, additionalData, createdAt) => {
+const createCustomerDocument = (userAuth, additionalData) => {
+  const createdAt = new Date();
   if (!userAuth) return;
-  const { displayName, mobile = 0, address = '' } = additionalData;
   setDoc(doc(db, 'customers', userAuth.uid), {
-    displayName,
-    mobile,
-    address,
+    ...additionalData,
     createdAt,
   });
 };
+
+export const getCustomerDocument = async (user) => {
+  if (!user) return;
+  const customer = await getDoc(doc(db, 'customers', user.uid));
+  if (customer.exists()) {
+    return customer;
+  } else {
+    console.log('Customer does not exist');
+  }
+};
+
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
