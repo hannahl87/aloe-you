@@ -30,6 +30,7 @@ const config = {
   measurementId: 'G-1NKB3Q9DVH',
 };
 
+// eslint-disable-next-line no-unused-vars
 const firebaseApp = initializeApp(config);
 
 const googleProvider = new GoogleAuthProvider();
@@ -79,7 +80,6 @@ export const createUserProfileDocument = async (
   if (!snapshot.exists()) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
-
     try {
       await setDoc(userRef, {
         displayName,
@@ -87,12 +87,24 @@ export const createUserProfileDocument = async (
         createdAt,
         ...additionalData,
       });
+      createCustomerDocument(userAuth, additionalData, createdAt);
     } catch (err) {
       console.log('error creating user', err.message);
     }
   }
 
   return userRef;
+};
+
+const createCustomerDocument = (userAuth, additionalData, createdAt) => {
+  if (!userAuth) return;
+  const { displayName, mobile = 0, address = '' } = additionalData;
+  setDoc(doc(db, 'customers', userAuth.uid), {
+    displayName,
+    mobile,
+    address,
+    createdAt,
+  });
 };
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
