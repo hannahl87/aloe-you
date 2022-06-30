@@ -76,16 +76,20 @@ const MyAccount = () => {
           <p className='font-bold'>
             Name:
             <span className='pl-2 text-gray-600 font-normal'>
-              {displayName}
+              {displayName ? displayName : 'Click edit to add details'}
             </span>
           </p>
           <p className='font-bold'>
             Mobile:
-            <span className='pl-2 text-gray-600 font-normal'>{mobile}</span>
+            <span className='pl-2 text-gray-600 font-normal'>
+              {mobile ? mobile : 'Click edit to add details'}
+            </span>
           </p>
           <p className='font-bold'>
             Address:
-            <span className='pl-2 text-gray-600 font-normal'>{address}</span>
+            <span className='pl-2 text-gray-600 font-normal'>
+              {address ? address : 'Click edit to add details'}
+            </span>
           </p>
           <FormButton type='button' onClick={toggleForm}>
             Edit
