@@ -43,6 +43,7 @@ TODO not limited to:
 [] Set basketItems to null when logout
 [] Fix bug on my account when refresh page
 [] Improve styling on orders table
+[] Add validation on my account form
 
 
 Please check back for progress.
