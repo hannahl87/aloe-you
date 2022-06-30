@@ -1,5 +1,5 @@
 import { Fragment, useContext } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.webp';
 import { UserContext } from '../../contexts/user.context';
 import { BasketContext } from '../../contexts/basket.context';
@@ -12,9 +12,11 @@ import './navigation.styles.scss';
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { isBasketOpen } = useContext(BasketContext);
+  const navigate = useNavigate();
 
   const signOutHandler = async () => {
     await signUserOut();
+    navigate('/aloe-you/login');
   };
 
   return (
@@ -39,7 +41,7 @@ const Navigation = () => {
         <div className='utils flex'>
           <BasketIcon />
           {currentUser ? (
-            <div className='user'>
+            <div className='user flex items-end pl-2'>
               <Link to='/aloe-you/my-account' className='hover:text-teal-400'>
                 My Account
               </Link>
