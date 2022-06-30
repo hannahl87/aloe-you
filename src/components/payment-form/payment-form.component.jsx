@@ -2,6 +2,8 @@ import { useElements, useStripe } from '@stripe/react-stripe-js';
 import { CardElement } from '@stripe/react-stripe-js';
 import { useContext } from 'react';
 import { BasketContext } from '../../contexts/basket.context';
+import { CustomerContext } from '../../contexts/customer.context';
+import { createOrderDocument } from '../../utils/firebase/firebase.utils';
 import FormButton from '../form-button/form-button.component';
 import './payment-form.styles.scss';
 
@@ -10,6 +12,7 @@ const PaymentForm = () => {
   const elements = useElements();
 
   const { basketTotal } = useContext(BasketContext);
+  const { currentCustomer } = useContext(CustomerContext);
 
   const paymentHandler = async (e) => {
     e.preventDefault();
@@ -18,10 +21,10 @@ const PaymentForm = () => {
       return;
     }
 
-    const response = await fetch("/.netlify/functions/create-payment-intent", {
-      method: "post",
+    const response = await fetch('/.netlify/functions/create-payment-intent', {
+      method: 'post',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ amount: basketTotal * 100 }),
     }).then((res) => {
@@ -35,17 +38,27 @@ const PaymentForm = () => {
       payment_method: {
         card: elements.getElement(CardElement),
         billing_details: {
-          name: "Hannah Lynn",
+          name: 'Hannah Lynn',
         },
       },
     });
 
+    console.log('paymentResult :', paymentResult);
     if (paymentResult.error) {
       alert(paymentResult.error.message);
     } else {
       if (paymentResult.paymentIntent.status === 'succeeded') {
+        createOrder(paymentResult);
         alert(`Payment for £${basketTotal} successful`);
       }
+    }
+  };
+
+  const createOrder = async (paymentResult) => {
+    try {
+      await createOrderDocument(currentCustomer, paymentResult);
+    } catch (err) {
+      console.log('error', err);
     }
   };
 

@@ -125,6 +125,18 @@ export const updateCustomerDocument = async (userId, additionalData) => {
   });
 };
 
+export const createOrderDocument = (customer, payment) => {
+  const { created, client_secret, amount, id, status } = payment.paymentIntent;
+  if (!customer || !customer.userId) return;
+  setDoc(doc(db, 'orders', customer.userId), {
+    clientSecret: client_secret,
+    amount: amount / 100,
+    paymentId: id,
+    status,
+    created,
+  });
+};
+
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
