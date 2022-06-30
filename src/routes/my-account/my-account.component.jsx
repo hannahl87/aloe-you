@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import FormButton from '../../components/form-button/form-button.component';
 import FormInput from '../../components/form-input/form-input.component';
+import OrdersTable from '../../components/orders-table/orders-table.component';
 import { CustomerContext } from '../../contexts/customer.context';
 import { updateCustomerDocument } from '../../utils/firebase/firebase.utils';
 import './my-account.styles.scss';
@@ -14,7 +15,6 @@ const MyAccount = () => {
   };
   const [editForm, setEditForm] = useState(false);
   const [formFields, setFormFields] = useState(defaultFormFields);
-
   const { displayName, mobile, address } = currentCustomer.customer;
   const toggleForm = () => {
     setEditForm(!editForm);
@@ -92,6 +92,7 @@ const MyAccount = () => {
           </FormButton>
         </div>
       )}
+      <OrdersTable />
     </div>
   );
 };

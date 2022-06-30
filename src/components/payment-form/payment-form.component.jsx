@@ -43,7 +43,6 @@ const PaymentForm = () => {
       },
     });
 
-    console.log('paymentResult :', paymentResult);
     if (paymentResult.error) {
       alert(paymentResult.error.message);
     } else {
