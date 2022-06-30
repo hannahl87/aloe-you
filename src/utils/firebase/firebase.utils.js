@@ -20,6 +20,8 @@ import {
   getDocs,
   updateDoc,
   serverTimestamp,
+  collectionGroup,
+  where,
 } from 'firebase/firestore';
 
 const config = {
@@ -137,6 +139,20 @@ export const createOrderDocument = (customer, payment) => {
     status,
     created,
   });
+};
+
+export const getOrders = async (user) => {
+  if (!user) return;
+  const orders = query(
+    collectionGroup(db, 'orders'),
+    where('customer', '==', user)
+  );
+  let theOrders = [];
+  const querySnapshot = await getDocs(orders);
+  querySnapshot.forEach((doc) => {
+    theOrders.push(doc.data());
+  });
+  return theOrders;
 };
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
