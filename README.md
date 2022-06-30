@@ -36,5 +36,8 @@ TODO not limited to:
 [x] Fix stripe auth error with secret key
 [] Handle routing differently for categories
 [] Add confirmation product was added to the basket
+[] Separate firebase utils into separate files
+[] Set basketItems to null when logout
+
 
 Please check back for progress.
