@@ -16,11 +16,9 @@ const PaymentForm = () => {
 
   const paymentHandler = async (e) => {
     e.preventDefault();
-
     if (!stripe || !elements || !basketTotal) {
       return;
     }
-
     const response = await fetch('/.netlify/functions/create-payment-intent', {
       method: 'post',
       headers: {
@@ -47,6 +45,7 @@ const PaymentForm = () => {
       alert(paymentResult.error.message);
     } else {
       if (paymentResult.paymentIntent.status === 'succeeded') {
+        elements.getElement(CardElement).clear();
         createOrder(paymentResult);
         alert(`Payment for £${basketTotal} successful`);
       }
