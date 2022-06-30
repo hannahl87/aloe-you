@@ -9,9 +9,15 @@ const BasketDropdown = () => {
   return (
     <div className='basket-dropdown flex flex-col items-center rounded-lg shadow-md absolute p-4'>
       <div className='basket-items flex flex-col overflow-scroll w-full'>
-        {basketItems.map((item) => {
-          return <BasketItem key={item.id} basketItem={item} />;
-        })}
+        {basketItems.length ? (
+          basketItems.map((item) => {
+            return <BasketItem key={item.id} basketItem={item} />;
+          })
+        ) : (
+          <div className='empty-basket-dropdown'>
+            You don't have any products in your basket
+          </div>
+        )}
       </div>
       <CtaButton link='aloe-you/basket' text='Go to Basket' />
     </div>
