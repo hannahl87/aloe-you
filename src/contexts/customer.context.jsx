@@ -1,5 +1,5 @@
+import { doc, getFirestore, onSnapshot } from 'firebase/firestore';
 import { createContext, useState, useEffect } from 'react';
-
 import {
   onAuthStateChangedListener,
   getCustomerDocument,
@@ -10,6 +10,8 @@ export const CustomerContext = createContext({
   setCurrentCustomer: () => null,
 });
 
+export const db = getFirestore();
+
 export const CustomerProvider = ({ children }) => {
   const [currentCustomer, setCurrentCustomer] = useState(null);
   const value = {
@@ -19,13 +21,15 @@ export const CustomerProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener(async (user) => {
-      console.log('user 11111:', user);
       if (user) {
         const customer = await getCustomerDocument(user);
         if (customer) {
-          console.log('cust test:', customer.data());
-          setCurrentCustomer(customer.data());
+          onSnapshot(doc(db, 'customers', user.uid), (doc) => {
+            setCurrentCustomer({ userId: user.uid, customer: doc.data() });
+          });
         }
+      } else {
+        setCurrentCustomer(null);
       }
     });
 

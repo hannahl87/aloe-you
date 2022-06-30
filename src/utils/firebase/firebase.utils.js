@@ -18,6 +18,8 @@ import {
   collection,
   query,
   getDocs,
+  updateDoc,
+  serverTimestamp,
 } from 'firebase/firestore';
 
 const config = {
@@ -115,6 +117,13 @@ export const getCustomerDocument = async (user) => {
   }
 };
 
+export const updateCustomerDocument = async (userId, additionalData) => {
+  if (!userId) return;
+  await updateDoc(doc(db, 'customers', userId), {
+    ...additionalData,
+    updatedAt: serverTimestamp(),
+  });
+};
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
