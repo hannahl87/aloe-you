@@ -22,17 +22,18 @@ export const CustomerProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener(async (user) => {
       if (user) {
-        const customer = await getCustomerDocument(user);
-        if (customer) {
-          onSnapshot(doc(db, 'customers', user.uid), (doc) => {
-            setCurrentCustomer({ userId: user.uid, customer: doc.data() });
-          });
-        }
+        setTimeout(() => {
+          const customer = getCustomerDocument(user);
+          if (customer) {
+            onSnapshot(doc(db, 'customers', user.uid), (doc) => {
+              setCurrentCustomer({ userId: user.uid, customer: doc.data() });
+            });
+          }
+        }, 500);
       } else {
         setCurrentCustomer(null);
       }
     });
-
     return unsubscribe;
   }, []);
 

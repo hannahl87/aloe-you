@@ -89,7 +89,7 @@ export const createUserProfileDocument = async (
         createdAt,
         ...additionalData,
       });
-      createCustomerDocument(userAuth, additionalData, createdAt);
+      await createCustomerDocument(userAuth, additionalData, createdAt);
     } catch (err) {
       console.log('error creating user', err.message);
     }
@@ -98,10 +98,10 @@ export const createUserProfileDocument = async (
   return userRef;
 };
 
-const createCustomerDocument = (userAuth, additionalData) => {
+const createCustomerDocument = async (userAuth, additionalData) => {
   const createdAt = new Date();
   if (!userAuth) return;
-  setDoc(doc(db, 'customers', userAuth.uid), {
+  await setDoc(doc(db, 'customers', userAuth.uid), {
     ...additionalData,
     createdAt,
   });
@@ -128,7 +128,9 @@ export const updateCustomerDocument = async (userId, additionalData) => {
 export const createOrderDocument = (customer, payment) => {
   const { created, client_secret, amount, id, status } = payment.paymentIntent;
   if (!customer || !customer.userId) return;
-  setDoc(doc(db, 'orders', customer.userId), {
+  const orderNumber = 'AY_' + new Date().getTime();
+  setDoc(doc(db, 'orders', orderNumber), {
+    customer: customer.userId,
     clientSecret: client_secret,
     amount: amount / 100,
     paymentId: id,
