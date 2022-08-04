@@ -30,20 +30,20 @@ The following has been built:
 - Display orders
 
 TODO not limited to:
-[] Improve UI overall
-[] Improve mobile styling on home page
-[] Handle loading
-[] Handle ability to submit payment twice
-[] Add loading/disable additional clicks on payment
-[] Add payment form validation instead of alerts
-[x] Fix stripe auth error with secret key
-[] Handle routing differently for categories - this way is terrible
-[] Add confirmation product was added to the basket
-[] Separate firebase utils into separate files
-[] Set basketItems to null when logout
-[] Fix bug on my account when refresh page
-[] Improve styling on orders table
-[] Add validation on my account form
+- [] Improve UI overall
+- [] Improve mobile styling on home page
+- [] Handle loading
+- [] Handle ability to submit payment twice
+- [] Add loading/disable additional clicks on payment
+- [] Add payment form validation instead of alerts
+- [x] Fix stripe auth error with secret key
+- [] Handle routing differently for categories - this way is terrible
+- [] Add confirmation product was added to the basket
+- [] Move firebase utils into separate files
+- [] Set basketItems to null when logout
+- [] Fix bug on my account when refresh page
+- [] Improve styling on orders table
+- [] Add validation on my account form
 
 
 Please check back for progress.
