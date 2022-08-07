@@ -1,14 +1,41 @@
-.top-card {
-    background-color: #F7F7F7;
-    height: 200px;
-}
+.shop-card {
 
-.shop-cta {
-    background-color: #7CD1B8;
-}
+    .top-card {
+        background-color: #F7F7F7;
+        height: 200px;
+    }
+
+    .shop-cta {
+        background-color: #7CD1B8;
+    }
 
 
-.plant-img {
-    height: 190px;
-    object-fit: scale-down;
+    .plant-img {
+        height: 190px;
+        object-fit: scale-down;
+    }
+
+    @media screen and (max-width: 1096px) {
+        .top-card {
+            width: 150px;
+        }
+    }
+
+    @media screen and (max-width: 971px) {
+        .top-card {
+            width: 119px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .top-card {
+            width: 200px;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .top-card {
+            width: 350px;
+        }
+    }
 }

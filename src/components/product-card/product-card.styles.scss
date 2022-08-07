@@ -3,13 +3,29 @@
     font-size: 14px;
     position: relative;
     width: 190px;
-}
 
-.collection-img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 5px;
-    object-fit: cover;
+    .collection-img {
+        width: 100%;
+        height: 195px;
+        object-fit: cover;
+    }
+
+    .name {
+        width: 85%;
+    }
+
+    .top-card {
+        background-color: #F7F7F7;
+    }
+
+    .form-btn {
+        display: block;
+        position: absolute;
+        top: 150px;
+        width: 75%;
+        opacity: 0.7;
+        left: 26px;
+    }
 }
 
 .collection-footer {
@@ -17,24 +33,18 @@
     background-color: #7CD1B8;
 }
 
-.name {
-    width: 85%;
-}
+@media screen and (min-width: 821px) {
 
-.top-card {
-    background-color: #F7F7F7;
-}
+    .collection-item .form-btn {
+        display: none;
+    }
 
-
-.collection-item .form-btn {
-    display: none;
-}
-
-.collection-item:hover .form-btn {
-    display: block;
-    position: absolute;
-    top: 150px;
-    width: 75%;
-    opacity: 0.7;
-    left: 26px;
+    .collection-item:hover .form-btn {
+        display: block;
+        position: absolute;
+        top: 150px;
+        width: 75%;
+        opacity: 0.7;
+        left: 26px;
+    }
 }
