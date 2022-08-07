@@ -32,14 +32,15 @@ The following has been built:
 TODO not limited to:
 - [x] Improve mobile styling on home page
 - [] Handle loading
-- [] Handle ability to submit payment twice
-- [] Add loading/disable additional clicks on payment
+- [x] Handle ability to submit payment twice
+- [x] Add loading/disable additional clicks on payment
 - [] Add payment form validation instead of alerts
+- [] Add payment success component
 - [x] Fix stripe auth error with secret key
 - [] Handle routing differently for categories - this way is terrible
 - [] Add confirmation product was added to the basket
 - [] Move firebase utils into separate files
-- [] Set basketItems to null when logout
+- [x] Set basketItems to null when logout
 - [] Fix bug on my account when refresh page
 - [x] Improve styling on orders table
 - [] Add validation on my account form
