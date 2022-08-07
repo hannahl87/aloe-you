@@ -30,8 +30,7 @@ The following has been built:
 - Display orders
 
 TODO not limited to:
-- [] Improve UI overall
-- [] Improve mobile styling on home page
+- [x] Improve mobile styling on home page
 - [] Handle loading
 - [] Handle ability to submit payment twice
 - [] Add loading/disable additional clicks on payment
@@ -42,7 +41,7 @@ TODO not limited to:
 - [] Move firebase utils into separate files
 - [] Set basketItems to null when logout
 - [] Fix bug on my account when refresh page
-- [] Improve styling on orders table
+- [x] Improve styling on orders table
 - [] Add validation on my account form
 
 
