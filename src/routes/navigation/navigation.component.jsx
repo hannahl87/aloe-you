@@ -11,10 +11,11 @@ import './navigation.styles.scss';
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  const { isBasketOpen } = useContext(BasketContext);
+  const { isBasketOpen, clearBasket } = useContext(BasketContext);
   const navigate = useNavigate();
 
   const signOutHandler = async () => {
+    clearBasket();
     await signUserOut();
     navigate('/aloe-you/login');
   };
