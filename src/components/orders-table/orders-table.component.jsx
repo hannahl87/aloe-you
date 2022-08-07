@@ -4,6 +4,7 @@ import './orders-table.styles.scss';
 
 const OrdersTable = () => {
   const { customerOrders } = useContext(CustomerContext);
+  console.log('customerOrders :', customerOrders);
 
   const convertDate = (date) => {
     const newDate = new Date(date * 1000).toLocaleDateString('en-gb');
@@ -14,12 +15,12 @@ const OrdersTable = () => {
     <div className='orders-table mt-6 w-full'>
       <h3 className='text-l font-bold flex justify-center my-6'>My Orders</h3>
       {customerOrders.length ? (
-        <table className='w-full border-1 border-cyan-300'>
+        <table className='w-full uppercase text-left'>
           <thead>
             <tr>
-              <th>Order Date</th>
-              <th>Order Total</th>
-              <th>Order Status</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
@@ -27,7 +28,13 @@ const OrdersTable = () => {
               <tr key={order.created}>
                 <td>{convertDate(order.created)}</td>
                 <td>£{order.amount}</td>
-                <td>{order.status}</td>
+                <td
+                  className={
+                    order.status === 'succeeded' ? 'success' : 'failed'
+                  }
+                >
+                  {order.status}
+                </td>
               </tr>
             ))}
           </tbody>
