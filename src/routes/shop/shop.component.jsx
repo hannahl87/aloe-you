@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { ProductsContext } from '../../contexts/products.context';
 import './shop.styles.scss';
 import ProductCard from '../../components/product-card/product-card.component';
+import AddedToBasket from '../../components/added-to-basket/added-component';
 
 const Shop = () => {
   const location = useLocation();
@@ -19,6 +20,7 @@ const Shop = () => {
 
   return (
     <div className='shop-page flex flex-col items-center mt-20 mx-14'>
+      <AddedToBasket />
       {titles.map((title) => {
         const newProducts = products.filter((product) => {
           return product.type.includes(title);

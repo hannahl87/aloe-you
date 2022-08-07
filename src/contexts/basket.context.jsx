@@ -50,15 +50,22 @@ export const BasketContext = createContext({
   addItemToBasket: () => {},
   removeItem: () => {},
   basketTotal: 0,
+  addingToBasket: false,
+  setAddingToBasket: () => {},
 });
 
 export const BasketProvider = ({ children }) => {
   const [isBasketOpen, setIsBasketOpen] = useState(false);
+  const [addingToBasket, setAddingToBasket] = useState(false);
   const [basketItems, setBasketItems] = useState([]);
   const [basketTotal, setBasketTotal] = useState(0);
 
   const addItemToBasket = (productToAdd) => {
+    setAddingToBasket(!addingToBasket);
     setBasketItems(addBasketItem(basketItems, productToAdd));
+    setTimeout(() => {
+      setAddingToBasket(addingToBasket);
+    }, 2000);
   };
   const removeItem = (productToRemove) => {
     setBasketItems(decreaseBasketItem(basketItems, productToRemove));
@@ -85,6 +92,8 @@ export const BasketProvider = ({ children }) => {
     removeItem,
     basketTotal,
     clearBasket,
+    addingToBasket,
+    setAddingToBasket,
   };
   return (
     <BasketContext.Provider value={value}> {children} </BasketContext.Provider>
