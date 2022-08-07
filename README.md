@@ -38,7 +38,7 @@ TODO not limited to:
 - [] Add payment success component
 - [x] Fix stripe auth error with secret key
 - [] Handle routing differently for categories - this way is terrible
-- [] Add confirmation product was added to the basket
+- [x] Add confirmation product was added to the basket
 - [] Move firebase utils into separate files
 - [x] Set basketItems to null when logout
 - [] Fix bug on my account when refresh page
