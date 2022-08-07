@@ -64,6 +64,11 @@ export const BasketProvider = ({ children }) => {
     setBasketItems(decreaseBasketItem(basketItems, productToRemove));
   };
 
+  const clearBasket = () => {
+    setBasketItems([]);
+    setBasketTotal(0);
+  };
+
   useEffect(() => {
     const newBasketTotal = basketItems.reduce(
       (total, basketItem) => (total += basketItem.price * basketItem.quantity),
@@ -79,6 +84,7 @@ export const BasketProvider = ({ children }) => {
     addItemToBasket,
     removeItem,
     basketTotal,
+    clearBasket,
   };
   return (
     <BasketContext.Provider value={value}> {children} </BasketContext.Provider>
