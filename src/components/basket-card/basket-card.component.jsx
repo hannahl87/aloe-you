@@ -12,7 +12,7 @@ const BasketCard = ({ item }) => {
       <img
         src={item.imageUrl}
         alt={item.name}
-        className='item-img rounded-xl h-60 mr-4'
+        className='item-img rounded-xl h-44 md:h-60 mr-4'
       />
       <div className='details flex flex-col'>
         <h3 className='item-name'>{item.name}</h3>
