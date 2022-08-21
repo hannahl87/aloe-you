@@ -67,7 +67,7 @@ const PaymentForm = () => {
     <div className='payment-form'>
       <form action='submit' onSubmit={paymentHandler}>
         <CardElement options={{ hidePostalCode: true }} />
-        <FormButton type='submit' disabled={btnDisabled}>
+        <FormButton type='submit' disabled={btnDisabled || !basketTotal}>
           {btnDisabled ? 'Submitting...' : 'Pay Now'}
         </FormButton>
       </form>
