@@ -11,6 +11,19 @@ Aloe you is going to be a house plant e-commerce site. I'm building it so I can 
 
 ## So Far...
 
+This is essentially a mock e-commerce site. You can browse products, add to basket and then log in to proceed to the check out. The checkout will take the Stripe test card details as follows:
+
+- Card Number: 4242 4242 4242 4242
+- Any 3 digits for cvc
+- Any date in the future for expiry
+
+To log into a test account and view and place orders please use the following details:
+
+- Username: hello@world.com
+- Password: helloworld
+
+
+
 The following has been built:
 
 - Start of the homepage
@@ -44,6 +57,8 @@ TODO not limited to:
 - [] Fix bug on my account when refresh page
 - [x] Improve styling on orders table
 - [] Add validation on my account form
+- [] Pressing submit on payment page after already checked out
+
 
 
 Please check back for progress.
